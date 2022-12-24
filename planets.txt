@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+      
+        Scanner input=new Scanner(System.in);
+        System.out.println("Please input your weight:");
+        double x=input.nextDouble();
+        System.out.println("Planet/Conversion Factor List");
+        System.out.println("1 Mercury   0.38");
+        System.out.println("2 Venus     0.91");
+        System.out.println("3 Mars      0.38");
+        System.out.println("4 Jupiter   2.36");
+        System.out.println("5 Saturn    0.92");
+        System.out.println("6 Uranus    0.89");
+        System.out.println("7 Neptune   1.13");
+        System.out.println("Type the number of planet on which you want to calculate the your weight:");
+        int num=input.nextInt();
+       
+      switch (num) {
+  case 1:
+    System.out.println("Your weight on mercury: " + x*0.38 +" lb");
+    break;
+  case 2:
+    System.out.println("Your weight on venus: " + x*0.91 +" lb");
+    break;
+     case 3:
+    System.out.println("Your weight on mars: "+ x*0.38 +" lb");
+    break;
+     case 4:
+    System.out.println("Your weight on jupiter: " + x*2.36+ " lb");
+    break;
+     case 5:
+    System.out.println("Your weight on saturn: " + x*0.92 +" lb");
+    break;
+     case 6:
+    System.out.println("Your weight on uranus: " + x*0.89 +" lb");
+    break;
+     case 7:
+    System.out.println("Your weight on neptune: " + x*1.13 +" lb");
+    break;
+  default:
+    System.out.println("You have to enter a number between 1-7" );
+}
+       
+    }
+}

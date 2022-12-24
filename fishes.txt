@@ -1,0 +1,41 @@
+public class Fish {
+  
+  String typeOfFish;
+  int friendliness;
+
+  public Fish() {
+    typeOfFish = "Unknown";
+    friendliness = 3;
+  }
+
+  public Fish(String t, int f) {
+    typeOfFish = t;
+    friendliness = f;
+  }
+
+  public static Fish nicestFish(Fish... fish) {
+    Fish temp = fish[0];
+    for (Fish f : fish) {
+     if(f.friendliness >=1 && f.friendliness<=5){
+      if (f.friendliness > temp.friendliness) {
+        temp = f;
+      }
+    }
+    else{
+        System.out.println("Friendliness must have a value between 1 and 5");
+    }
+    }
+
+    return temp;
+  }
+
+  public static void main(String[] args) {
+    Fish fish1 = new Fish("AngelFish", 2);
+    Fish fish2 = new Fish();
+    Fish fish3 = new Fish("Trout", 4);
+    Fish fish4 = new Fish("Swordfish", 6);
+
+    Fish nicest = nicestFish(fish1, fish2, fish3, fish4);
+    System.out.println("The nicest fish is: " + nicest.typeOfFish);
+}
+}

@@ -1,0 +1,71 @@
+class Arrays {
+
+	public static void main(String args[])
+	{
+
+		// Declaring an array of student
+		Student[] [] arr;
+
+		// Allocating memory for 2 objects
+		// of type student
+		arr = new Student[2][2];
+
+		// Creating actual student objects
+		arr[0][0] = new Student();
+		arr[0][1] = new Student();
+      	arr[1][0] = new Student();
+		arr[1][1] = new Student();
+		// Assigning data to student objects
+		arr[0][0].setData(07010, "Martin","Engineering");
+		arr[0][1].setData(07011, "James","Physics");
+		arr[1][0].setData(17014, "Nina","Mathematics");
+		arr[1][1].setData(17015, "Johann","Art History");
+		
+
+		// Displaying the student data
+		for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+		    if(i==0){
+		System.out.println(	"Student data in Oracle: ");}
+			else if(i==1){
+			 System.out.println(	"Student data in Networking:");
+			    
+			}
+			
+			else{
+			   	System.out.println(	"Student data in MIS: ");}
+			
+		arr[i][j].display();
+
+
+		//arr[1].display();
+	}}
+}
+}
+// Creating a Student class with
+// id and name as a attributes
+class Student {
+
+	public int id;
+	public String name;
+	public String department;
+
+	// Method to set the data to
+	// student objects
+	public void setData(int id, String name,String department)
+	{
+		this.id = id;
+		this.name = name;
+		this.department=department;
+	}
+
+	// display() method to display
+	// the student data
+	public void display()
+	{
+		System.out.println("Student id is: " + id + " "
+						+ "Name is: "
+						+ name +" "+ "Department is:" + department);
+		System.out.println("");
+	}
+}
